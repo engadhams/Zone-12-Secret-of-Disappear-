@@ -19,6 +19,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //This is a comment
        horiz = Input.GetAxis("Horizontal");
        vert = Input.GetAxis("Vertical");
        Vector3 move = vert* transform.forward + transform.right *horiz;
