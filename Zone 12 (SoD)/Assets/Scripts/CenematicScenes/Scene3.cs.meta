@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ebe7313bd98cc4e448f3efdab093bfb9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cen: {instanceID: 0}
+  - MotorWSmoke: {instanceID: 0}
+  - MotorRSmoke: {instanceID: 0}
+  - Zone12: {fileID: 7925707824267586713, guid: c3c029ddcd4cd6843b1cbd29a741faf4,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

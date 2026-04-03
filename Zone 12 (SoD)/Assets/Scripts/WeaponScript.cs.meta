@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ca7d77870b3eb64ab3bdd9b07e4809a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - anim: {instanceID: 0}
+  - NormalController: {fileID: 9100000, guid: 68660c0ad09f4d841a4fe686384b94d3, type: 2}
+  - rifleController: {fileID: 9100000, guid: 5da9a5ff8c23c544f9bfa792ff634a05, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
