@@ -64517,7 +64517,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6d0af997f10ae7144b694c72d159169f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.872
+      value: -0.896
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d0af997f10ae7144b694c72d159169f,
         type: 3}
@@ -98419,7 +98419,7 @@ TerrainCollider:
   m_GameObject: {fileID: 1239718524}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 285a15e310187fb47be49c538a4dc318, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 0c4757f888ad167478f8994683ec69d8, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &1239718526
 Terrain:
@@ -98430,7 +98430,7 @@ Terrain:
   m_GameObject: {fileID: 1239718524}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 285a15e310187fb47be49c538a4dc318, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 0c4757f888ad167478f8994683ec69d8, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -113397,9 +113397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  horiz: 0
-  vert: 0
+  mouseSens: 2
   player: {fileID: 1394167440}
+  cam: {fileID: 23488717}
   rb: {fileID: 1394167441}
 --- !u!82 &1394167450
 AudioSource:

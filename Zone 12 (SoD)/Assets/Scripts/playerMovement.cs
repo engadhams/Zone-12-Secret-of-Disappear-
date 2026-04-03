@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    float xRot;
+    float yRot;
     public float moveSpeed = 5;
     public float mouseSens = 2;
-    public float horiz;
-    public float vert;
-    public float mouseX;
-    public float mouseY;
+    float horiz;
+    float vert;
+    float mouseX;
+    float mouseY;
     public GameObject player;
+    public GameObject cam;
     public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -35,11 +38,14 @@ public class playerMovement : MonoBehaviour
 
     void Look()
     {
-        mouseX = Input.GetAxis("Mouse Y")*mouseSens;
-        mouseY = Input.GetAxis("Mouse X")*mouseSens;
+        mouseX = Input.GetAxis("Mouse X")*mouseSens;
+        mouseY = Input.GetAxis("Mouse Y")*mouseSens;
 
-        Quaternion rotValue = Quaternion.Euler(mouseX,mouseY,0);
+        xRot -= mouseY;
+        xRot = Mathf.Clamp(xRot, -70,70);
         
-        transform.rotation = rotValue;
+
+        cam.transform.localRotation = Quaternion.Euler(xRot,0,0);
+        transform.Rotate(Vector3.up * mouseX);
     }
 }
