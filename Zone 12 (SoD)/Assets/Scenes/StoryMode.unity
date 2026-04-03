@@ -113555,7 +113555,6 @@ GameObject:
   - component: {fileID: 1394167443}
   - component: {fileID: 1394167442}
   - component: {fileID: 1394167441}
-  - component: {fileID: 1394167448}
   - component: {fileID: 1394167450}
   - component: {fileID: 1394167446}
   m_Layer: 0
@@ -113672,24 +113671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horiz: 0
   vert: 0
---- !u!143 &1394167448
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394167440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.8
-  m_Radius: 0.35
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
