@@ -98798,25 +98798,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1263990983}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1263990985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263990984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce9e2cbeca6ae0847a61e565290c66f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  src: {fileID: 1263990986}
-  fireClip: {fileID: 0}
-  reloadClip: {fileID: 0}
-  camTrans: {fileID: 8300000, guid: c333490c5f8b1134fb9e6b107d8d6529, type: 3}
-  BoatMotor: {fileID: 8300000, guid: e27ccf79af4ac04449651f17bf7a4da1, type: 3}
-  radio: {fileID: 8300000, guid: 6577abbb12326934b9c646a01f71b168, type: 3}
-  isPlaying: 0
 --- !u!82 &1263990986
 AudioSource:
   m_ObjectHideFlags: 0
