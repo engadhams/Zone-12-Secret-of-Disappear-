@@ -8,6 +8,7 @@ public class playerMovement : MonoBehaviour
     public float horiz;
     public float vert;
     public GameObject player;
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,12 @@ public class playerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
        horiz = Input.GetAxis("Horizontal");
        vert = Input.GetAxis("Vertical");
-       
        Vector3 move = vert* transform.forward + transform.right *horiz;
-       transform.position = move* moveSpeed;
+
+       rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
     }
 }
