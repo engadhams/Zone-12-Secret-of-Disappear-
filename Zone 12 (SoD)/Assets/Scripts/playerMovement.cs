@@ -44,7 +44,6 @@ public class playerMovement : MonoBehaviour
         xRot -= mouseY;
         xRot = Mathf.Clamp(xRot, -70,70);
         
-
         cam.transform.localRotation = Quaternion.Euler(xRot,0,0);
         transform.Rotate(Vector3.up * mouseX);
     }
