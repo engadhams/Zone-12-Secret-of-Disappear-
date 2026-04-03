@@ -113877,10 +113877,7 @@ GameObject:
   - component: {fileID: 1394167443}
   - component: {fileID: 1394167442}
   - component: {fileID: 1394167441}
-  - component: {fileID: 1394167446}
-  - component: {fileID: 1394167447}
   - component: {fileID: 1394167448}
-  - component: {fileID: 1394167449}
   - component: {fileID: 1394167450}
   m_Layer: 0
   m_Name: Player
@@ -113981,45 +113978,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1394167446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394167440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3837baca63a7a744e93eafa2600a3113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canMove: 1
-  canRotate: 1
-  speed: 3
-  jumpForce: 5
-  gravity: -9.81
-  mouseSensitivity: 2
-  playerCamera: {fileID: 0}
-  controller: {fileID: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  xRotation: 0
---- !u!114 &1394167447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394167440}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a6235066e7c524fb94f314b6fb80f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  inWater: 0
-  waterLevel: 0
-  waterDrag: 15
-  force: 10
 --- !u!143 &1394167448
 CharacterController:
   m_ObjectHideFlags: 0
@@ -114038,22 +113996,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &1394167449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394167440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac8664c799f1e5142bec059242f12994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hMove: 0
-  vMove: 0
-  pMove: {fileID: 1394167446}
-  anim: {fileID: 0}
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
