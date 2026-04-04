@@ -42,7 +42,7 @@ public class playerMovement : MonoBehaviour
         mouseY = Input.GetAxis("Mouse Y")*mouseSens;
 
         xRot -= mouseY;
-        xRot = Mathf.Clamp(xRot, -70,70);
+        xRot = Mathf.Clamp(xRot, -80,60);
         
         cam.transform.localRotation = Quaternion.Euler(xRot,0,0);
         transform.Rotate(Vector3.up * mouseX);
