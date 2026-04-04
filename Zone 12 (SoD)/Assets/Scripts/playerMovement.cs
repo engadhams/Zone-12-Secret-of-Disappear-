@@ -38,6 +38,14 @@ public class playerMovement : MonoBehaviour
         Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
         rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
 
+        if(vert != 0)
+        {
+            anim.SetFloat("Speed", 1);
+        }
+        else
+        {
+            anim.SetFloat("Speed", 0);
+        }
         
     }
 
