@@ -38,14 +38,24 @@ public class playerMovement : MonoBehaviour
         Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
         rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
 
-        if(vert != 0)
+        if(vert != 0 || horiz != 0)
         {
-            anim.SetFloat("Speed", 1);
+            
+            if(Input.GetKey(KeyCode.LeftShift))
+            {
+                moveSpeed = 6;
+                anim.SetFloat("Speed", 2);
+            }
+            else
+            {
+                moveSpeed = 3;
+                anim.SetFloat("Speed", 1);
+            }
+
         }
         else
         {
             anim.SetFloat("Speed", 0);
-            
         }
         
     }
