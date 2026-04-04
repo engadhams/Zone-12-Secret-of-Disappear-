@@ -45,6 +45,7 @@ public class playerMovement : MonoBehaviour
         else
         {
             anim.SetFloat("Speed", 0);
+            
         }
         
     }
