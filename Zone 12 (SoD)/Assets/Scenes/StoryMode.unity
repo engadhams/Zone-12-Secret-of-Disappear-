@@ -113421,11 +113421,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4bf2edaf9f7f449a0726ecc267de1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  mouseSens: 2
+  anim: {fileID: 944215952}
   player: {fileID: 1394167440}
   cam: {fileID: 23488717}
   rb: {fileID: 1394167441}
+  moveSpeed: 5
+  mouseSens: 2
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
