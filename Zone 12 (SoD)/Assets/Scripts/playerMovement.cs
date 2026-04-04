@@ -76,9 +76,16 @@ public class playerMovement : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up *jumpForce, ForceMode.Impulse);
         }
+
+    }
+
+    public float rayDistance = 1.2f;
+    bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, rayDistance);
     }
 }
