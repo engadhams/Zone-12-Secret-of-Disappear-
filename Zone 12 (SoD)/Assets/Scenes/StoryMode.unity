@@ -113473,7 +113473,7 @@ MonoBehaviour:
   rb: {fileID: 1394167441}
   moveSpeed: 3
   mouseSens: 2
-  jumpForce: 10
+  jumpForce: 1000
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
