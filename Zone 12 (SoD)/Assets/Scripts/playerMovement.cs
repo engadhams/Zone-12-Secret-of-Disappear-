@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     public Rigidbody rb;
     public float moveSpeed = 5;
     public float mouseSens = 2;
+    public float jumpForce= 2;
 
     float horiz;
     float vert;
@@ -29,6 +30,7 @@ public class playerMovement : MonoBehaviour
     {
         Move();
         Look();
+        Jump();
     }
     void Move()
     {
@@ -40,15 +42,15 @@ public class playerMovement : MonoBehaviour
 
         if(vert != 0 || horiz != 0)
         {
-            
+            // Sprint and Walk anims
             if(Input.GetKey(KeyCode.LeftShift))
             {
-                moveSpeed = 6;
+                moveSpeed = 8;
                 anim.SetFloat("Speed", 2);
             }
             else
             {
-                moveSpeed = 3;
+                moveSpeed = 3.5f;
                 anim.SetFloat("Speed", 1);
             }
 
@@ -70,5 +72,13 @@ public class playerMovement : MonoBehaviour
         
         cam.transform.localRotation = Quaternion.Euler(xRot,0,0);
         transform.Rotate(Vector3.up * mouseX);
+    }
+
+    void Jump()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up *jumpForce, ForceMode.Impulse);
+        }
     }
 }

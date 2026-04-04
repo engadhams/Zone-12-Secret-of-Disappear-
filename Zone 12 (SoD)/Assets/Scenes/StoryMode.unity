@@ -113471,8 +113471,9 @@ MonoBehaviour:
   player: {fileID: 1394167440}
   cam: {fileID: 23488717}
   rb: {fileID: 1394167441}
-  moveSpeed: 5
+  moveSpeed: 3
   mouseSens: 2
+  jumpForce: 10
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
