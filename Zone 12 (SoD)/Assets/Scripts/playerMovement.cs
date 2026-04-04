@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    float xRot;
-    float yRot;
+    public Animator anim;
+    public GameObject player;
+    public GameObject cam;
+    public Rigidbody rb;
     public float moveSpeed = 5;
     public float mouseSens = 2;
+
     float horiz;
     float vert;
     float mouseX;
     float mouseY;
-    public GameObject player;
-    public GameObject cam;
-    public Rigidbody rb;
+    float xRot;
+    float yRot;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +34,11 @@ public class playerMovement : MonoBehaviour
     {
         horiz = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
+
         Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
         rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
+
+        
     }
 
     void Look()
