@@ -113473,7 +113473,7 @@ MonoBehaviour:
   rb: {fileID: 1394167441}
   moveSpeed: 3
   mouseSens: 2
-  jumpForce: 300
+  jumpForce: 500
   rayDistance: 0.85
 --- !u!82 &1394167450
 AudioSource:
@@ -133658,6 +133658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -808966925217029657, guid: 958c4ed4f9a5da64aa1f37a9d6ee0998,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 958c4ed4f9a5da64aa1f37a9d6ee0998,
         type: 3}
