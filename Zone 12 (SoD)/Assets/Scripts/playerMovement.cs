@@ -76,7 +76,7 @@ public class playerMovement : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if(Input.GetKey(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up *jumpForce, ForceMode.Impulse);
         }
