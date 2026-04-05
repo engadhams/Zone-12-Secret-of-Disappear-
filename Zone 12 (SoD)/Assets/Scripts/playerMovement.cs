@@ -78,7 +78,7 @@ public class playerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            rb.AddForce(Vector3.up *jumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up *jumpForce, ForceMode.Force);
         }
 
     }
