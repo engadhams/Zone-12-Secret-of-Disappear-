@@ -114344,6 +114344,7 @@ GameObject:
   - component: {fileID: 1394167441}
   - component: {fileID: 1394167450}
   - component: {fileID: 1394167446}
+  - component: {fileID: 1394167447}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -114463,7 +114464,27 @@ MonoBehaviour:
   moveSpeed: 3
   mouseSens: 2
   jumpForce: 500
+<<<<<<< Updated upstream
   rayDistance: 1
+=======
+  rayDistance: 0.9
+--- !u!114 &1394167447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394167440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cac3b3ca55faa4aa9a0f732474b6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1394167441}
+  rollForce: 100
+  rollDuration: 0.5
+  rollCooldown: 1
+>>>>>>> Stashed changes
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
