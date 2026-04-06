@@ -19,6 +19,8 @@ public class playerMovement : MonoBehaviour
     float xRot;
     float yRot;
 
+    public bool isMoving;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,7 @@ public class playerMovement : MonoBehaviour
 
         if(vert != 0 || horiz != 0)
         {
+            isMoving = true;
             // Sprint and Walk anims
             if(Input.GetKey(KeyCode.LeftShift))
             {
@@ -57,6 +60,7 @@ public class playerMovement : MonoBehaviour
         }
         else
         {
+            isMoving = false;
             anim.SetFloat("Speed", 0);
         }
         

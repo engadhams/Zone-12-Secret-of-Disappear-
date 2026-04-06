@@ -6,6 +6,9 @@ public class Audio : MonoBehaviour
 {
     playerMovement plMoveScr;
     AudioSource audSrc;
+    [Header("Clips")]
+    public AudioClip footstep;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +19,28 @@ public class Audio : MonoBehaviour
 
     void Update()
     {
+        if(plMoveScr.isMoving)
+        {
+            FootstepSound();
+        }
+        else
+        {
+            StopSounds();
+        }
         
     }
 
 
     void FootstepSound()
     {
+        audSrc.clip = footstep;
+        audSrc.loop = true;
         
+    }
+
+    void StopSounds()
+    {
+        audSrc.Stop();
     }
 
 }
