@@ -114342,6 +114342,7 @@ GameObject:
   - component: {fileID: 1394167443}
   - component: {fileID: 1394167442}
   - component: {fileID: 1394167441}
+  - component: {fileID: 1394167448}
   - component: {fileID: 1394167450}
   - component: {fileID: 1394167446}
   - component: {fileID: 1394167447}
@@ -114437,7 +114438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394167440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5816.08, y: 114.14, z: 2651.47}
+  m_LocalPosition: {x: -5834.16, y: 115.36, z: 2651.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 933830652}
@@ -114464,6 +114465,7 @@ MonoBehaviour:
   moveSpeed: 3
   mouseSens: 2
   jumpForce: 500
+  isMoving: 0
   rayDistance: 1
 --- !u!114 &1394167447
 MonoBehaviour:
@@ -114481,6 +114483,22 @@ MonoBehaviour:
   rollForce: 100
   rollDuration: 0.3
   rollCooldown: 0.5
+  audioSource: {fileID: 1394167450}
+  dodgeSound: {fileID: 8300000, guid: c333490c5f8b1134fb9e6b107d8d6529, type: 3}
+--- !u!114 &1394167448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394167440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b582a07ad0a9b9a4b8b11c2a95fe248c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 0
+  footstep: {fileID: 8300000, guid: ccb0b3b1d64dec14790ea352b9b6f2cb, type: 3}
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -114491,7 +114509,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ccb0b3b1d64dec14790ea352b9b6f2cb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
