@@ -41,13 +41,18 @@ public class playerMovement : MonoBehaviour
 
         if(IsGrounded())
         {
+            isMoving = true;
             Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
             rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
+        }
+        else
+        {
+            isMoving = false;
         }
 
         if(vert != 0 || horiz != 0)
         {
-            isMoving = true;
+            
             // Sprint and Walk anims
             if(Input.GetKey(KeyCode.LeftShift))
             {
