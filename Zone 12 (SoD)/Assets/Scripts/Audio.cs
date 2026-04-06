@@ -34,6 +34,7 @@ public class Audio : MonoBehaviour
     void FootstepSound()
     {
         audSrc.clip = footstep;
+        audSrc.Play();
         audSrc.loop = true;
         
     }
