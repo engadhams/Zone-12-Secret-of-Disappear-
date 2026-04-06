@@ -114572,7 +114572,7 @@ MonoBehaviour:
   moveSpeed: 3
   mouseSens: 2
   jumpForce: 500
-  rayDistance: 0.9
+  rayDistance: 1
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -130009,7 +130009,7 @@ BoxCollider:
   m_GameObject: {fileID: 1779024708}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.031980477, y: 0.12828879, z: 0.011195725}
   m_Center: {x: -0.0007206993, y: 0.0014132252, z: 0.013613796}
