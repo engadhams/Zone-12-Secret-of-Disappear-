@@ -39,8 +39,11 @@ public class playerMovement : MonoBehaviour
         horiz = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
 
-        Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
-        rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
+        if(IsGrounded())
+        {
+            Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
+            rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
+        }
 
         if(vert != 0 || horiz != 0)
         {
