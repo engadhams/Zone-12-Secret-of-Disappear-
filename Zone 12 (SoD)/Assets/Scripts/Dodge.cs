@@ -21,7 +21,7 @@ public class Dodge : MonoBehaviour {
         // محاولة البحث عن AudioSource إذا لم يتم تعيينه
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        //rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     void Update() {

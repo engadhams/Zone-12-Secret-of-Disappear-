@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour
 {
+    public bool isPlaying=false;
     playerMovement plMoveScr;
     AudioSource audSrc;
     [Header("Clips")]
@@ -33,14 +34,19 @@ public class Audio : MonoBehaviour
 
     void FootstepSound()
     {
-        audSrc.clip = footstep;
-        audSrc.Play();
-        audSrc.loop = true;
+        if(!isPlaying)
+        {
+            isPlaying = true;
+            audSrc.clip = footstep;
+            audSrc.loop = true;
+            audSrc.Play();
+        }
         
     }
 
     void StopSounds()
     {
+        isPlaying = false;
         audSrc.Stop();
     }
 
