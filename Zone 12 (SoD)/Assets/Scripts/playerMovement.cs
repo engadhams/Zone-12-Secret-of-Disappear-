@@ -34,6 +34,8 @@ public class playerMovement : MonoBehaviour
         Look();
         Jump();
     }
+
+    //This is a comment
     void Move()
     {
         horiz = Input.GetAxis("Horizontal");
