@@ -19,6 +19,9 @@ public class playerMovement : MonoBehaviour
     float xRot;
     float yRot;
 
+    public bool isAbletoMove=true;
+    public bool isAbletoLook=true;
+
     public bool isMoving;
 
     // Start is called before the first frame update
@@ -30,9 +33,15 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Move();
-        Look();
-        Jump();
+        if(isAbletoMove)
+        {
+            Move();
+            Jump();
+        }
+        if(isAbletoLook)
+        {
+            Look();
+        }
     }
 
     //This is a comment
