@@ -39,17 +39,12 @@ public class playerMovement : MonoBehaviour
         horiz = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
 
-        if(IsGrounded())
-        {
-            
-            Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
-            rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
-        }
+        Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
+        rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
 
-        if(vert != 0 || horiz != 0)
+        if((vert != 0 || horiz != 0) && IsGrounded())
         {
-            
-            
+            isMoving = true;
             // Sprint and Walk anims
             if(Input.GetKey(KeyCode.LeftShift))
             {
@@ -65,6 +60,7 @@ public class playerMovement : MonoBehaviour
         }
         else
         {
+            isMoving = false;
             anim.SetFloat("Speed", 0);
         }
         
