@@ -8,10 +8,14 @@ public class playerMovement : MonoBehaviour
     public GameObject player;
     public GameObject cam;
     public Rigidbody rb;
+    CharacterController controller;
+    Vector3 velocity;
+
     public float moveSpeed = 5;
     public float mouseSens = 2;
     public float jumpForce= 2;
 
+    float gravity=-9.81f;
     float horiz;
     float vert;
     float mouseX;
@@ -27,6 +31,7 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -50,21 +55,32 @@ public class playerMovement : MonoBehaviour
         horiz = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
 
-        Vector3 move = (vert* transform.forward + transform.right *horiz) *moveSpeed;
-        rb.velocity = new Vector3(move.x ,rb.velocity.y, move.z);
+        Vector3 move = (vert* transform.forward + transform.right *horiz);
+        move.Normalize();
 
-        if((vert != 0 || horiz != 0) && IsGrounded())
+        controller.Move(move * moveSpeed* Time.deltaTime);
+
+        // الجاذبية
+        if (controller.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+
+        if((vert != 0 || horiz != 0) && controller.isGrounded)
         {
             isMoving = true;
             // Sprint and Walk anims
             if(Input.GetKey(KeyCode.LeftShift))
             {
-                moveSpeed = 8;
+                moveSpeed = 10;
                 anim.SetFloat("Speed", 2);
             }
             else
             {
-                moveSpeed = 3.5f;
+                moveSpeed = 5f;
                 anim.SetFloat("Speed", 1);
             }
 
@@ -91,16 +107,7 @@ public class playerMovement : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKey(KeyCode.Space) && IsGrounded())
-        {
-            rb.AddForce(Vector3.up *jumpForce, ForceMode.Impulse);
-        }
+        
 
-    }
-
-    public float rayDistance = 1.2f;
-    bool IsGrounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, rayDistance);
     }
 }

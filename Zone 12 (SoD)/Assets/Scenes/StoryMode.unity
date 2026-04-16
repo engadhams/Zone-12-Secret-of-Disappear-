@@ -114501,6 +114501,7 @@ GameObject:
   - component: {fileID: 1394167450}
   - component: {fileID: 1394167446}
   - component: {fileID: 1394167447}
+  - component: {fileID: 1394167449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -114520,7 +114521,7 @@ Rigidbody:
   m_Drag: 0.5
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -114623,7 +114624,6 @@ MonoBehaviour:
   isAbletoMove: 1
   isAbletoLook: 1
   isMoving: 0
-  rayDistance: 1
 --- !u!114 &1394167447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114631,7 +114631,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394167440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56cac3b3ca55faa4aa9a0f732474b6c4, type: 3}
   m_Name: 
@@ -114656,6 +114656,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlaying: 0
   footstep: {fileID: 8300000, guid: ccb0b3b1d64dec14790ea352b9b6f2cb, type: 3}
+--- !u!143 &1394167449
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394167440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.5
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1394167450
 AudioSource:
   m_ObjectHideFlags: 0
