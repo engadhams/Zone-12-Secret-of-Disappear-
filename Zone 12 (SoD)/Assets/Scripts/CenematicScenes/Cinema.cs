@@ -32,6 +32,7 @@ public class Cinema : MonoBehaviour
 
         Vector3 dskPos =  new Vector3(Desk.position.x, player.transform.position.y, Desk.position.z);
         player.transform.LookAt(dskPos);
+        pM.anim.SetFloat("Greet", 0);
         inCutScene = true;
         CameraSwitch();
         playerMoveForward = true;
