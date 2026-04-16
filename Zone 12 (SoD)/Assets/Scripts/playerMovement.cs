@@ -7,13 +7,12 @@ public class playerMovement : MonoBehaviour
     public Animator anim;
     public GameObject player;
     public GameObject cam;
-    public Rigidbody rb;
     CharacterController controller;
     Vector3 velocity;
 
     public float moveSpeed = 5;
     public float mouseSens = 2;
-    public float jumpForce= 2;
+    public float jumpForce= 1.5f;
 
     float gravity=-9.81f;
     float horiz;
@@ -107,7 +106,10 @@ public class playerMovement : MonoBehaviour
 
     void Jump()
     {
-        
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+        }
 
     }
 }

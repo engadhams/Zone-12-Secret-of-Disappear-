@@ -40501,7 +40501,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9243b3c4b5e9032458c69a7a9e1cae74,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.703
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9243b3c4b5e9032458c69a7a9e1cae74,
         type: 3}
@@ -46236,10 +46236,9 @@ GameObject:
   m_Component:
   - component: {fileID: 779360005}
   - component: {fileID: 779360006}
-  - component: {fileID: 779360007}
   m_Layer: 0
   m_Name: MissionScene
-  m_TagString: Untagged
+  m_TagString: SceneActivator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46252,7 +46251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779360004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 84.65, z: -106.33}
+  m_LocalPosition: {x: -1.38, y: 84.84, z: -106.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2061507006}
@@ -46271,20 +46270,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.8256836, y: 0.09404755, z: 2.9763184}
   m_Center: {x: 0.7375488, y: -0.8083153, z: 0.53552246}
---- !u!114 &779360007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779360004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07fb0589a5f49b84a9a217889bb72220, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cen: {fileID: 2061507007}
-  targetScene: GetMission
 --- !u!1 &795436430
 GameObject:
   m_ObjectHideFlags: 0
@@ -114502,6 +114487,7 @@ GameObject:
   - component: {fileID: 1394167446}
   - component: {fileID: 1394167447}
   - component: {fileID: 1394167449}
+  - component: {fileID: 1394167451}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -114617,10 +114603,9 @@ MonoBehaviour:
   anim: {fileID: 944215952}
   player: {fileID: 1394167440}
   cam: {fileID: 23488717}
-  rb: {fileID: 1394167441}
   moveSpeed: 3
   mouseSens: 2
-  jumpForce: 500
+  jumpForce: 1.5
   isAbletoMove: 1
   isAbletoLook: 1
   isMoving: 0
@@ -114770,6 +114755,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1394167451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394167440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07fb0589a5f49b84a9a217889bb72220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cen: {fileID: 2061507007}
+  sceneSel: GetMission
 --- !u!1001 &1399625733
 PrefabInstance:
   m_ObjectHideFlags: 0

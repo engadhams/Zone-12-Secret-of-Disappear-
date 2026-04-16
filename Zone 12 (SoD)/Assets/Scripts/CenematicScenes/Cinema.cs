@@ -22,13 +22,16 @@ public class Cinema : MonoBehaviour
         cenCam.enabled = false;
         pM = player.GetComponent<playerMovement>();
     }
+
     public void ActivateScene1()
     {
         // "GetMission" Scene
-        pM.anim.SetFloat("Speed", 1);
         pM.isAbletoLook = false;
         pM.isAbletoMove = false;
-        player.transform.LookAt(Desk);
+        pM.anim.SetFloat("Speed", 1);
+
+        Vector3 dskPos =  new Vector3(Desk.position.x, player.transform.position.y, Desk.position.z);
+        player.transform.LookAt(dskPos);
         inCutScene = true;
         CameraSwitch();
         playerMoveForward = true;
@@ -55,6 +58,8 @@ public class Cinema : MonoBehaviour
 
         if(playerMoveForward && distance > 2)
         {
+            pM.isMoving = true;
+            pM.anim.SetFloat("Speed", 1);
             player.transform.position = player.transform.position + player.transform.forward * 0.04f;
         }
         else if(playerMoveForward && distance < 2)

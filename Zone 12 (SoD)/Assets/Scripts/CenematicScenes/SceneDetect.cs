@@ -5,17 +5,13 @@ using UnityEngine;
 public class SceneDetect : MonoBehaviour
 {
     public Cinema cen;
-    public string targetScene;
-
-    void OnCollisionEnter(Collision other)
+    public string sceneSel;
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(other.collider.tag == "Player")
+        if (hit.gameObject.CompareTag("SceneActivator") && sceneSel=="GetMission")
         {
-            if(targetScene == "GetMission")
-            {
-                cen.ActivateScene1();
-                GetComponent<BoxCollider>().enabled = false;
-            }
+            cen.ActivateScene1();
+            hit.gameObject.GetComponent<BoxCollider>().enabled =false;
         }
     }
 }
