@@ -18,6 +18,7 @@ public class Cinema : MonoBehaviour
 
     void Start()
     {
+        CameraSwitch();
         pM = player.GetComponent<playerMovement>();
     }
     public void ActivateScene1()
