@@ -18,13 +18,14 @@ public class Cinema : MonoBehaviour
 
     void Start()
     {
-        CameraSwitch();
+        mainCam.enabled = true;
+        cenCam.enabled = false;
         pM = player.GetComponent<playerMovement>();
     }
     public void ActivateScene1()
     {
         // "GetMission" Scene
-        
+        pM.anim.SetFloat("Speed", 1);
         pM.isAbletoLook = false;
         pM.isAbletoMove = false;
         player.transform.LookAt(Desk);
