@@ -154562,7 +154562,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 41d162c322da62e4fb4a253e16e80510,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77.2
+      value: 61.38945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41d162c322da62e4fb4a253e16e80510,
         type: 3}
@@ -154572,7 +154572,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 41d162c322da62e4fb4a253e16e80510,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.5
+      value: -41.799805
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41d162c322da62e4fb4a253e16e80510,
         type: 3}
@@ -159712,7 +159712,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8d6a9d1e52339cc4585fa8ee3a9b4cd8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.50049
+      value: 60.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d6a9d1e52339cc4585fa8ee3a9b4cd8,
         type: 3}
@@ -159722,7 +159722,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8d6a9d1e52339cc4585fa8ee3a9b4cd8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.620117
+      value: -33.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d6a9d1e52339cc4585fa8ee3a9b4cd8,
         type: 3}
@@ -174661,6 +174661,8 @@ MonoBehaviour:
   rollCooldown: 0.5
   audioSource: {fileID: 1394167450}
   dodgeSound: {fileID: 8300000, guid: c333490c5f8b1134fb9e6b107d8d6529, type: 3}
+  isRolling: 0
+  canRoll: 1
 --- !u!114 &1394167448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174674,6 +174676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaying: 0
+  plMoveScr: {fileID: 0}
+  audSrc: {fileID: 0}
   footstep: {fileID: 8300000, guid: ccb0b3b1d64dec14790ea352b9b6f2cb, type: 3}
 --- !u!143 &1394167449
 CharacterController:
@@ -194448,7 +194452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695573447}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 47.72998, y: -23.310001, z: 30}
+  m_LocalPosition: {x: 45.3, y: -23.310001, z: 30}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 80087722}
@@ -218685,7 +218689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031176718}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 47.72998, y: -23.310001, z: 38.15149}
+  m_LocalPosition: {x: 45.30005, y: -23.310001, z: 38.15149}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1437416563}
@@ -218742,6 +218746,9 @@ MonoBehaviour:
   Desk: {fileID: 2411918918912775689}
   mainCam: {fileID: 23488720}
   cenCam: {fileID: 75072163}
+  playerMoveForward: 0
+  inCutScene: 0
+  pM: {fileID: 0}
 --- !u!1 &2076403218
 GameObject:
   m_ObjectHideFlags: 0
